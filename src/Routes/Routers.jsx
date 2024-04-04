@@ -4,24 +4,29 @@ import ErrorPage from "../Pages/Error/ErrorPage";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Career from "../Pages/Career/Career";
+import Login from "../Pages/Home/Login";
 
 const routers = createBrowserRouter([
     {
         path: '/',
-        errorElement: <ErrorPage/>,
-        element: <Root/>,
+        errorElement: <ErrorPage />,
+        element: <Root />,
         children: [
             {
                 index: true,
-                element: <Home/>
+                element: <Home />
             },
             {
                 path: '/about',
-                element: <About/>
+                element: <About />
             },
             {
                 path: '/career',
-                element: <Career/>
+                element: <Career />
+            },
+            {
+                path: '/login',
+                element: <Login />
             }
         ]
     }
