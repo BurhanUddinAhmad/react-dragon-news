@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
+import LeftSideNews from "../../Components/LeftSideNews";
 
 
 const LeftSideBar = () => {
@@ -14,7 +15,7 @@ const LeftSideBar = () => {
         <>
             <h2 className="text-xl font-semibold mb-3">All Categories</h2>
 
-            <div className=" mb-3">
+            <div className=" mb-3 ml-5">
                 {
                     categories.map(category => <div 
                     key={category.id}
@@ -25,6 +26,10 @@ const LeftSideBar = () => {
                     >{category.name}</NavLink>
                     </div>)
                 }
+            </div>
+
+            <div>
+                <LeftSideNews/>
             </div>
         </>
     );
